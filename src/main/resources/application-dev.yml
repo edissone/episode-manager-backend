@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: episode-manager
+  jpa:
+    hibernate:
+      ddl-auto: none
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+  datasource:
+    url: jdbc:mysql://localhost:3606/episode_db?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: user
+    password: pwd
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  flyway:
+    baseline-on-migrate: false
+    enabled: true
+    url: ${spring.datasource.url}
+    user: ${spring.datasource.username}
+    password: ${spring.datasource.password}

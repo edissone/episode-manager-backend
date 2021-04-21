@@ -1,0 +1,76 @@
+[
+  [
+    {
+      "name": "Morty",
+      "gender": "Male",
+      "origin": "Earth"
+    },
+    {
+      "name": "Rick",
+      "gender": "Male",
+      "origin": "Earth"
+    },
+    {
+      "name": "Lola",
+      "gender": "Female",
+      "origin": "Mars"
+    }
+  ],
+  {
+    "title": "Episode Three",
+    "season": 1,
+    "number": 3,
+    "releasedAt": "31-10-2001",
+    "characters": [
+      {
+        "name": "Bender",
+        "gender": "Other",
+        "origin": "CE-123"
+      },
+      {
+        "name": "Mary",
+        "gender": "Female",
+        "origin": "Earth"
+      },
+      {
+        "name": "50 Cent",
+        "gender": "Male",
+        "origin": "Pluto"
+      }
+    ]
+  },
+  {
+    "title": "Episode two",
+    "season": 1,
+    "number": 2,
+    "releasedAt": "30-10-2001",
+    "characters": [
+      {
+        "name": "Bender",
+        "gender": "Other",
+        "origin": "CE-123"
+      },
+      {
+        "name": "Morty",
+        "gender": "Male",
+        "origin": "Earth"
+      },
+      {
+        "name": "Rick",
+        "gender": "Male",
+        "origin": "Earth"
+      },
+      {
+        "name": "Lola",
+        "gender": "Female",
+        "origin": "Mars"
+      }
+    ]
+  },
+  {
+    "title": "Episode one",
+    "season": 1,
+    "number": 1,
+    "releasedAt": "29-10-2001"
+  }
+]

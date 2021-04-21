@@ -1,0 +1,37 @@
+version: '3.1'
+
+services:
+
+  episode-mysqldb:
+    image: mysql:5.7
+    container_name: episode-mysqldb
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    volumes:
+      - episode-mysqldb-volume:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: episode_db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: pwd
+      MYSQL_ROOT_PASSWORD: root_pwd
+    ports:
+      - 3606:3306
+
+  service:
+    container_name: episode-service
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    restart: always
+    depends_on:
+      - episode-mysqldb
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://episode-mysqldb:3306/episode_db?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+      SPRING_DATASOURCE_USERNAME: user
+      SPRING_DATASOURCE_PASSWORD: pwd
+      SPRING_PROFILES_ACTIVE: dev
+
+volumes:
+  episode-mysqldb-volume:
